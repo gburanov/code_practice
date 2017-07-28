@@ -1,0 +1,6 @@
+<p id="notice"><%= notice %></p>
+
+<%= render @note %>
+
+<%= link_to 'Edit', edit_customer_note_path(@note.customer, @note) %> |
+<%= link_to 'Back', customer_notes_path(@customer) %>

@@ -1,0 +1,10 @@
+source 'https://rubygems.org'
+
+gem "treetop-dcf"
+gem "attr_extras"
+gem "activerecord"
+
+group :test do
+  gem "webmock"
+  gem "database_cleaner"
+end

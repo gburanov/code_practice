@@ -1,0 +1,24 @@
+<a href="/">Go back to home</a>
+<p>Current page <%= @current_page %></p>
+
+<% @pages.each do |page| %>
+<a href="<%= page[:href] %>"><%= page[:text] %></a>
+<% end %>
+
+<% if @error %>
+<h1><%= @error %></h1>
+<% end %>
+
+<% if @offers.empty? %>
+  <p>No offers available</p>
+<% else %>
+  <% @offers.each do |o| offer = OfferPresenter.new(o)  %>
+  <h3>
+    <a href="<%= offer.link %>"><%= offer.title %></a>
+  </h3>
+  <p>Types: <%= offer.types %></p>
+  <p>Payout <%= offer.payout %> take <%= offer.payout_time %> time</p>
+  <img src="<%= offer.image %>">
+  <hr>
+  <% end %>
+<% end %>

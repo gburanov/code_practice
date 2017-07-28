@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @customer.last_name %>, <%= @customer.first_name %></h1>
+
+<p>
+    <%= @customer.street %></br>
+    <%= @customer.postcode %> <%= @customer.city %></br>
+    <%= @customer.email %></br>
+    <%= @customer.birthday %></br>
+</p>
+
+
+<hr>
+<h2>Notes</h2>
+
+<%= render @customer.notes %>
+
+<hr>
+<h2>Add new Note</h2>
+<%= render 'notes/form' %>
+
+<%= link_to "Back to index", customers_path %>

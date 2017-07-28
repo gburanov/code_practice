@@ -1,0 +1,5 @@
+<%= div_for note do %>
+    <h3><%= time_ago_in_words note.created_at %></h3>
+    <p><%= note.body %></p>
+    <%= link_to t('.links.delete'), [note.customer, note], :method => :delete, :remote => true %>
+<% end %>

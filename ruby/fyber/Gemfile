@@ -1,0 +1,11 @@
+source "https://rubygems.org"
+
+gem "sinatra"
+gem "httparty"
+gem "attr_extras"
+
+group :test do
+  gem "pacto"
+  gem "webmock"
+  gem "timecop"
+end

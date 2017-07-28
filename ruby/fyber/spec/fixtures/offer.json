@@ -1,0 +1,35 @@
+{
+  "title": "Rich Casino - Deposit",
+  "offer_id": 967319,
+  "teaser": "Melde Dich als neuer Benutzer an und zahle mindesten 25€",
+  "required_actions": "Melde Dich als neuer Benutzer an und zahle mindesten 25€",
+  "link": "http://offer.fyber.com/mobile?impression=true&appid=157&uid=player&client=api&platform=web&appname=Demo+iframe+for+publisher+-+do+not+touch&traffic_source=offer_api&country_code=DE&pubid=249&ip=109.235.143.113&device_id=2b6f0cc904d137be2e1730235f5664094b83&flash_cookie=a22d41c3f295b1f5898922d83768924b&ad_id=967319&ad_format=offer&sig=1fe470eba564e3365042ec0e4e16c99d4a949578",
+  "offer_types": [
+    {
+      "offer_type_id": 103,
+      "readable": "Einkaufen"
+    },
+    {
+      "offer_type_id": 106,
+      "readable": "Spiele"
+    },
+    {
+      "offer_type_id": 109,
+      "readable": "Spiele"
+    },
+    {
+      "offer_type_id": 112,
+      "readable": "Gratis"
+    }
+  ],
+  "payout": 2890062,
+  "time_to_payout": {
+    "amount": 300,
+    "readable": "5 Minuten"
+  },
+  "thumbnail": {
+    "lowres": "http://cdn2.sponsorpay.com/assets/61579/rich-casino_square_60.png",
+    "hires": "http://cdn2.sponsorpay.com/assets/61579/rich-casino_square_175.png"
+  },
+  "store_id": ""
+}

@@ -1,0 +1,12 @@
+<h1><%= t '.title' %></h1>
+<%= link_to "Create new customer", "/customers/new" %>
+<ul>
+    <% @customers.each do |customer| %>
+    <li>
+        <%= customer.first_name %>,
+        <%= customer.last_name %>
+            <%= link_to 'show', customer %>
+            <%= link_to 'edit', [:edit, customer] %>
+    </li>
+    <% end %>
+</ul>

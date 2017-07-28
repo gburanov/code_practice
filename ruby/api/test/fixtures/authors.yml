@@ -1,0 +1,16 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined. If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one:
+  creator: user
+  name: Author1
+  biography: Biography1
+# column: value
+#
+two:
+  creator: guest
+  name: Author2
+  biography: Biography2
