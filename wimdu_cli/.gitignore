@@ -1,0 +1,11 @@
+# Created by .ignore support plugin (hsz.mobi)
+
+.idea/
+
+.bundle
+
+db/development.sqlite3
+db/test.sqlite3
+db/production.sqlite3
+
+tmp

@@ -1,0 +1,10 @@
+--- !ruby/object:Property
+name: DA14B08F92
+my_hash:
+  :title: My Title
+  :type: apartment
+  :address: Domanenstrasse 14/1
+  :email: gburanov@gmail.com
+  :phone_number: "+79037119856"
+  :nightly_rate: '120'
+  :guests: '2'

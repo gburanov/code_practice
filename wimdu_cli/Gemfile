@@ -1,0 +1,10 @@
+source 'https://rubygems.org'
+
+gem "aruba"
+gem "rspec"
+
+gem 'thor'
+
+# use activerecord (separate from rails) as a database backend
+gem 'activerecord'
+gem 'sqlite3'
