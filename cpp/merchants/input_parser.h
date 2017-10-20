@@ -1,4 +1,8 @@
 #include <string>
 #include <vector>
 
-std::vector<std::string> process(std::vector<std::string>& str);
+typedef std::vector<std::string> StrVec;
+StrVec process(const StrVec& str);
+
+
+void test_roman();
