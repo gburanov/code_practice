@@ -1,6 +1,8 @@
 #include <stdio.h>
-#include "input_parser.h"
 #include <iostream>
+
+#include "input_parser.h"
+#include "parser_test.h"
 
 void assert(const StrVec& input, const StrVec& output) {
   StrVec testOutput = process(input);
@@ -11,6 +13,7 @@ void assert(const StrVec& input, const StrVec& output) {
 
 void tests() {
   test_roman();
+  test_splitting();
   {
     StrVec input;
     input.push_back(std::string("How much wood"));
@@ -21,6 +24,7 @@ void tests() {
 }
 
 int main() {
+  init();
   tests();
   std::cout << "tests passed\n";
 
