@@ -1,0 +1,12 @@
+<h1> Create new boomark </h1>
+
+<%= form_with model: Bookmark.new do |form| %>
+  <p>
+    <%= form.label :url %><br>
+    <%= form.label :text %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
