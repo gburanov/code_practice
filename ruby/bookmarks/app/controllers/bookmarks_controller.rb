@@ -26,6 +26,7 @@ class BookmarksController < ApplicationController
   private
 
   def bookmark_params
-    params.require(:boomark).permit(:url, :text, :shortening)
+    byebug
+    params.require(:bookmark).permit(:url, :text, :shortening)
   end
 end
