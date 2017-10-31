@@ -2,6 +2,7 @@
 * Started with rails 5
 * Used as many Rails as possible - including views
 * Wrote some basic tests - definitely less than needed because I am out of time
+* I use local: true in forms in preserve old Rails - I would not do it in real life
 
 ## Some things to improve
 * Add auth - devise? - if needed?

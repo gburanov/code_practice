@@ -4,14 +4,28 @@ class BookmarksController < ApplicationController
   end
 
   def create
+    @bookmark = Bookmark.new(bookmark_params)
+
+    if @bookmark.save
+      redirect_to @bookmark
+    else
+      render 'new'
+    end
   end
 
   def new
+
   end
 
   def update
   end
 
   def show
+  end
+
+  private
+
+  def bookmark_params
+    params.require(:boomark).permit(:url, :text, :shortening)
   end
 end

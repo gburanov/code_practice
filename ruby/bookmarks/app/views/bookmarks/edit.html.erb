@@ -1,12 +1,3 @@
 <h1> Edit bookmark </h1>
 
-<%= form_with model: @bookmark do |form| %>
-  <p>
-    <%= form.label :url %><br>
-    <%= form.label :text %>
-  </p>
-
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
+<%= render 'bookmark' %>
