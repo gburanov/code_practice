@@ -1,0 +1,20 @@
+<%= form_with model: @bookmark do |form| %>
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+
+  <p>
+    <%= form.label :url %><br>
+    <%= form.text_area :text %>
+  </p>
+
+  <p>
+    <%= form.label :shortening %><br>
+    <%= form.text_area :shortening %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

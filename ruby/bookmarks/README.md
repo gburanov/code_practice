@@ -8,6 +8,7 @@
 * Use different DB
 * Use better search solution - like Elasticsearch
 * Improve frontend - I am just a BE dev
+* Add FE validations - now it is only BE
 * I would use Rails only for the backend in real project - and write FE in smth like React/Rails
 * Definitely write more test
 * Speaking about specs, I think I would use rspec for prod + factory girl
