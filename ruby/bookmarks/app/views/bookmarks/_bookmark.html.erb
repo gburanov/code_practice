@@ -1,4 +1,11 @@
-<%= form_with model: @bookmar, url: bookmarks_path do |form| %>
+<%= form_with model: @bookmark, local: true do |form| %>
+
+  <% if @bookmark.errors.any? %>
+    <% @bookmark.errors.full_messages.each do |msg| %>
+      <p><%= msg %>
+    <% end %>
+  <% end %>
+
   <p>
     <%= form.label :title %><br>
     <%= form.text_field :title %>

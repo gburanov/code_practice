@@ -14,10 +14,17 @@ class BookmarksController < ApplicationController
   end
 
   def new
-
+    @bookmark = Bookmark.new
   end
 
   def update
+    @bookmark = Bookmark.find(params[:id])
+
+    if @bookmark.update(bookmark_params)
+      redirect_to @article
+    else
+      render 'edit'
+    end
   end
 
   def show
@@ -26,7 +33,6 @@ class BookmarksController < ApplicationController
   private
 
   def bookmark_params
-    byebug
-    params.require(:bookmark).permit(:url, :text, :shortening)
+    params.permit(:url, :title, :shortening)
   end
 end

@@ -1,4 +1,4 @@
 class Bookmark < ApplicationRecord
-  validates :text, presence: true
+  validates :title, presence: true
   validates :url, presence: true
 end

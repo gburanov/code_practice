@@ -12,4 +12,5 @@
 * Add FE validations - now it is only BE
 * I would use Rails only for the backend in real project - and write FE in smth like React/Rails
 * Definitely write more test
-* Speaking about specs, I think I would use rspec for prod + factory girl
+* Speaking about specs, I think I would use factory girl in real life but it does not go by default
+* Definitely add CI/CD - it was not mentioned in the task and I do not have time for it
