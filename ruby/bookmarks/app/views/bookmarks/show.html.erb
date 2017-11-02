@@ -1,3 +1,8 @@
 <h1>Bookmark</h1>
-<p><%= @bookmark.title %>
-<p><%= @bookmark.url %>
+<p>Title: <%= @bookmark.title %>
+<p>Url: <%= @bookmark.url %>
+<p>Shortening: <%= @bookmark.shortening %>
+
+<h2>Links</h2>
+<p><%= link_to 'Edit', edit_bookmark_path(@bookmark) %>
+<p><%= link_to 'All', bookmarks_path %>
