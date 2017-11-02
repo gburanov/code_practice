@@ -3,14 +3,21 @@
 require 'rails_helper'
 
 describe Bookmark do
-  context 'when ui is invalid' do
+  let(:title) { 'title' }
+
+  context 'when url is invalid' do
     let(:url) { 'bad_http' }
-    let(:title) { 'title' }
     it 'does not save' do
-      byebug
       bookmark = described_class.new(url: url, title: title)
       expect(bookmark.save).to be false
+    end
+  end
 
+  context 'when url is valid' do
+    let(:url) { 'http://ya.ru' }
+    it 'saves' do
+      bookmark = described_class.new(url: url, title: title)
+      expect(bookmark.save).to be true
     end
   end
 end
