@@ -4,6 +4,7 @@ class CreateBookmarks < ActiveRecord::Migration[5.0]
       t.string :url
       t.string :title
       t.string :shortening
+      t.integer :site_id
 
       t.timestamps
     end

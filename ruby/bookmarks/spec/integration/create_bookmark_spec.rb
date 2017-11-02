@@ -14,5 +14,12 @@ describe 'create boomark page', type: :feature do
   end
 
   context 'when something is not filled' do
+    it 'shows error' do
+      visit '/bookmarks/new'
+      fill_in 'bookmark[title]', with: 'Yandex'
+      submit_form
+      expect(Bookmark.count).to be 0
+      expect(page).to contain
+    end
   end
 end

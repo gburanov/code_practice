@@ -1,3 +1,6 @@
+## How to
+* puma to start server
+
 ## What have I done
 * Started with rails 5
 * Used as many Rails as possible - including views

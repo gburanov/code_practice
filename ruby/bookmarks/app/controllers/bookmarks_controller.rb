@@ -23,7 +23,7 @@ class BookmarksController < ApplicationController
     @bookmark = Bookmark.find(params[:id])
 
     if @bookmark.update(bookmark_params)
-      redirect_to @article
+      redirect_to @bookmark
     else
       render 'edit'
     end

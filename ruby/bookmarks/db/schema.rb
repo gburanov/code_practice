@@ -13,21 +13,22 @@
 ActiveRecord::Schema.define(version: 20171031192059) do
 
   create_table "bookmarks", force: :cascade do |t|
-    t.string   "url"
-    t.string   "title"
-    t.string   "shortening"
+    t.string "url"
+    t.string "title"
+    t.string "shortening"
+    t.integer "site_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "sites", force: :cascade do |t|
-    t.string   "url"
+    t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "tags", force: :cascade do |t|
-    t.string   "name"
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
