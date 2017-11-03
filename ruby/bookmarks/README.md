@@ -1,6 +1,11 @@
 ## How to
 * puma to start server
 
+## Search
+* Looks for exact matches
+* Looks in all fields
+* See spec for details
+
 ## What have I done
 * Started with rails 5
 * Used as many Rails as possible - including views
@@ -9,6 +14,7 @@
 * Instead of controller tests I decided to concentrate on integration - quick win
 
 ## Some things to improve
+* I would definitely use pure frontend and return just json
 * Add auth - devise? - if needed?
 * Use different DB
 * Use better search solution - like Elasticsearch
