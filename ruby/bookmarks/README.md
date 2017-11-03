@@ -22,8 +22,9 @@ git subtree push --prefix output heroku master
 
 ## Validations
 * Only backend
-* Had no timem to add FE
-
+* Not full - some url validations can be better
+* As well as error messages
+* Had no time to add FE
 
 ## What have I done
 * Started with rails 5
