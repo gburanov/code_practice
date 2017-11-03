@@ -17,7 +17,4 @@
 
 <%= link_to 'New bookmark', new_bookmark_path %>
 
-<%= form_tag do %>
-  <%= text_field_tag :search_criteria %>
-  <%= submit_tag 'Search' %>
-<% end %>
+<%= render 'bookmarks/search' %>
