@@ -5,6 +5,19 @@
 * Looks for exact matches
 * Looks in all fields
 * See spec for details
+* In the real world, search would be moved to ELK or at least to db
+
+## DB
+* I use pg only on production, I don't have it locally and did not want to mess with docker envs for this task
+* But of course in real time it would be nice
+
+## Heroku
+* I deployed it to Heroku
+* I am greedy and don't want extra repo in my github, so I use subfolder
+* I use this to push to Heroku
+```
+git subtree push --prefix output heroku master
+```
 
 ## What have I done
 * Started with rails 5

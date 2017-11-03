@@ -14,3 +14,9 @@ Style/Documentation:
 
 Metrics/LineLength:
   Max: 150
+
+Style/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'spec/**/*.rb'
