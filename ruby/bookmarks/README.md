@@ -18,6 +18,7 @@
 ```
 git subtree push --prefix output heroku master
 ```
+* Check it out https://ancient-depths-65232.herokuapp.com/
 
 ## What have I done
 * Started with rails 5
