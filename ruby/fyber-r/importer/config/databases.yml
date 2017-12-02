@@ -1,13 +1,15 @@
 development:
   adapter: postgresql
-  host: pg
+  host: db
+  port: 5432
   encoding: unicode
   database: postgres_development
   pool: 5
   username: root
 
 production:
-  host: pg
+  host: db
+  port: 5432
   adapter: postgresql
   encoding: unicode
   database: postgres_production
@@ -15,7 +17,8 @@ production:
   username: root
 
 test:
-  host: pg
+  host: db
+  port: 5432
   adapter: postgresql
   encoding: unicode
   database: postgres_test

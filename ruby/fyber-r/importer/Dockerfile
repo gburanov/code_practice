@@ -1,5 +1,5 @@
 FROM ruby:2.4.0
-MAINTAINER Georgy Buranov <georgy.buranov@applift.com>
+MAINTAINER Georgy Buranov <gburanov@gmail.com>
 
 ARG APP_HOME=/app
 
@@ -12,4 +12,4 @@ COPY config/* $APP_HOME/config/
 RUN bundle install
 
 # Start server
-CMD ["start_script.sh"]
+CMD ["./start_script.sh"]

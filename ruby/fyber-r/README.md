@@ -1,5 +1,9 @@
-# Start the service
+#  Steps
+* Build the service
 ```
-docker-compose up -d
-docker-compose start importer
+docker-compose build
+```
+* Start the service
+```
+docker-compose up
 ```
