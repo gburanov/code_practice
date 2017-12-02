@@ -1,0 +1,35 @@
+AllCops:
+  Exclude:
+    - Rakefile
+    - spec/**/*
+    - bin/*
+    - db/schema.rb
+    - vendor/**/*
+    - frontend/**/*
+
+Rails:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 150
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Rails/HasAndBelongsToMany:
+  Enabled: false
+
+Style/DotPosition:
+  EnforcedStyle: trailing
+
+Style/SignalException:
+  Enabled: false
+
+Style/UnneededInterpolation:
+  Enabled: false
+
+Style/Alias:
+Enabled: false
