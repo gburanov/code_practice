@@ -1,5 +1,5 @@
-# Database initialisation
+# Start the service
 ```
-  rake db:create
-  rake db:migrate
+docker-compose up -d
+docker-compose start importer
 ```

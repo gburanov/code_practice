@@ -8,8 +8,7 @@ RUN mkdir $APP_HOME
 WORKDIR $APP_HOME
 # Upload source
 COPY . $APP_HOME
-COPY Gemfile* $APP_HOME/
-COPY ./config/* $APP_HOME/config
+COPY config/* $APP_HOME/config/
 RUN bundle install
 
 RUN rake db:create
