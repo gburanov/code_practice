@@ -11,8 +11,5 @@ COPY . $APP_HOME
 COPY config/* $APP_HOME/config/
 RUN bundle install
 
-RUN rake db:create
-RUN rake db:migrate
-
 # Start server
-CMD ["ruby", "start.rb"]
+CMD ["start_script.sh"]

@@ -1,11 +1,23 @@
 development:
-  adapter: sqlite3
-  database: db/development.sqlite3
+  adapter: postgresql
+  host: pg
+  encoding: unicode
+  database: postgres_development
+  pool: 5
+  username: root
 
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
+  host: pg
+  adapter: postgresql
+  encoding: unicode
+  database: postgres_production
+  pool: 5
+  username: root
 
 test:
-  adapter: sqlite3
-  database: db/test.sqlite3
+  host: pg
+  adapter: postgresql
+  encoding: unicode
+  database: postgres_test
+  pool: 5
+  username: root
