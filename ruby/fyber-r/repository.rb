@@ -1,10 +1,8 @@
-require "attr_extras"
-require "open-uri"
-require "dcf"
+require 'attr_extras'
+require 'open-uri'
+require 'dcf'
 
-require "byebug"
-
-require "./package_factory.rb"
+require_relative './package_factory.rb'
 
 class Repository
   rattr_initialize :url
@@ -18,9 +16,9 @@ class Repository
         pair = Dcf.parse(line)
         next if pair.nil?
         attribute = pair.first.keys[0]
-        if attribute == "Package"
+        if attribute == 'Package'
           @package = pair.first.values[0]
-        elsif attribute == "Version"
+        elsif attribute == 'Version'
           @version = pair.first.values[0]
           yield package(@package, @version)
         end
@@ -35,6 +33,6 @@ class Repository
   private
 
   def file
-    URI::join(url, "PACKAGES")
+    URI.join(url, 'PACKAGES')
   end
 end

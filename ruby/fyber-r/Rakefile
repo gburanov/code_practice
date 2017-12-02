@@ -3,20 +3,12 @@ require 'logger'
 require 'active_record'
 
 namespace :db do
-  def create_database config
-    options = {:charset => 'utf8', :collation => 'utf8_unicode_ci'}
-
-    create_db = lambda do |config|
-      ActiveRecord::Base.establish_connection config
-    end
-
-    begin
-      create_db.call config
+  def create_database(config)
+      ActiveRecord::Base.establish_connection(config)
     rescue Exception => e
       $stderr.puts e.to_s
       $stderr.puts "Couldn't create database for #{config.inspect}, charset: utf8, collation: utf8_unicode_ci"
       $stderr.puts "(if you set the charset manually, make sure you have a matching collation)" if config['charset']
-    end
   end
 
   task :environment do

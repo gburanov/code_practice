@@ -1,11 +1,15 @@
 source 'https://rubygems.org'
 
-gem 'treetop-dcf'
-gem 'attr_extras'
 gem 'activerecord'
+gem 'attr_extras'
 gem 'sqlite3'
+gem 'treetop-dcf'
 
 group :test do
-  gem 'webmock'
   gem 'database_cleaner'
+  gem 'webmock'
+end
+
+group :development, :test do
+  gem 'rubocop'
 end

@@ -32,4 +32,4 @@ Style/UnneededInterpolation:
   Enabled: false
 
 Style/Alias:
-Enabled: false
+  Enabled: false

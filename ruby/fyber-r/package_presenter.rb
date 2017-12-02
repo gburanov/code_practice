@@ -1,5 +1,4 @@
-require "attr_extras"
-require "byebug"
+require 'attr_extras'
 
 class PackagePresenter
   rattr_initialize :package

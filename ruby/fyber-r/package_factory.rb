@@ -1,15 +1,12 @@
-require "attr_extras"
+require 'attr_extras'
+require 'rubygems/package'
+require 'zlib'
+require 'dcf'
+require 'open-uri'
 
-require "byebug"
-require "rubygems/package"
-require "zlib"
-require "dcf"
-
-require "./package.rb"
-require "./author.rb"
-require "./author_factory"
-
-require "open-uri"
+require_relative './package.rb'
+require_relative './author.rb'
+require_relative './author_factory'
 
 class PackageFactory
   rattr_initialize :name, :version, :url
@@ -38,11 +35,11 @@ class PackageFactory
 
   def mapping(attributes)
     {
-      name: attributes["Package"],
-      version: attributes["Version"],
-      date: attributes["Date"] || attributes["Date/Publication"],
-      title: attributes["Title"],
-      description: attributes["Description"]
+      name: attributes['Package'],
+      version: attributes['Version'],
+      date: attributes['Date'] || attributes['Date/Publication'],
+      title: attributes['Title'],
+      description: attributes['Description']
     }
   end
 

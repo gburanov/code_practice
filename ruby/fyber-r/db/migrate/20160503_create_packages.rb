@@ -1,4 +1,4 @@
-class CreatePackages < ActiveRecord::Migration
+class CreatePackages < ActiveRecord::Migration[4.2]
   def up
     create_table :packages do |t|
       t.string    :name
@@ -7,12 +7,11 @@ class CreatePackages < ActiveRecord::Migration
       t.string    :title
       t.string    :description
     end
-    puts "Packages table created"
+    puts 'Packages table created'
   end
 
   def down
     drop_table :packages
-    puts "Packages table destroyed"
+    puts 'Packages table destroyed'
   end
-
 end
