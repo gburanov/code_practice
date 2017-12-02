@@ -9,6 +9,10 @@ services:
       - .env
 
   db:
-    image: postgres
+    image: postgres:9.5
     ports:
       - "5432"
+    environment:
+      - POSTGRES_PASSWORD=supersecret
+      - POSTGRES_USER=username
+      - POSTGRES_DB=dbname

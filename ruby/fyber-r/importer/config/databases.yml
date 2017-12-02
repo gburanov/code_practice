@@ -5,7 +5,8 @@ development:
   encoding: unicode
   database: postgres_development
   pool: 5
-  username: root
+  username: username
+  password: supersecret
 
 production:
   host: db
@@ -14,7 +15,8 @@ production:
   encoding: unicode
   database: postgres_production
   pool: 5
-  username: root
+  username: username
+  password: supersecret
 
 test:
   host: db
@@ -23,4 +25,5 @@ test:
   encoding: unicode
   database: postgres_test
   pool: 5
-  username: root
+  username: username
+  password: supersecret
