@@ -1,4 +1,4 @@
-require "./repository"
+require_relative "../repository"
 
 describe Repository do
   subject { Repository.new("https://cran.r-project.org/src/contrib/") }

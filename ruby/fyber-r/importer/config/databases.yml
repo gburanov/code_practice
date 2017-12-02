@@ -1,29 +1,15 @@
-development:
+development: &dev
   adapter: postgresql
   host: db
   port: 5432
   encoding: unicode
-  database: postgres_development
+  database: dbname
   pool: 5
-  username: username
+  username: postgres
   password: supersecret
 
 production:
-  host: db
-  port: 5432
-  adapter: postgresql
-  encoding: unicode
-  database: postgres_production
-  pool: 5
-  username: username
-  password: supersecret
+  <<: *dev
 
 test:
-  host: db
-  port: 5432
-  adapter: postgresql
-  encoding: unicode
-  database: postgres_test
-  pool: 5
-  username: username
-  password: supersecret
+  <<: *dev

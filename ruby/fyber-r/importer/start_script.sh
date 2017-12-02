@@ -2,4 +2,4 @@
 
 rake db:create
 rake db:migrate
-ruby start.rb
+DATABASE_ENV=production ruby import.rb

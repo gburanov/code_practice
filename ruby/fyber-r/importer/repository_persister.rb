@@ -3,18 +3,13 @@ require "./repository.rb"
 class RepositoryPersister
   rattr_initialize :repository
 
-  def call(max_numbers)
+  def call(max_number)
     it = 0
     repository.parse do |package|
-      puts "Parsed package #{package}"
-      ret = package.save
-      if ret == false
-        puts "Already persisted"
-      else
-        puts package.persisted?
-      end
+      puts "Parsing... package #{package}"
+      puts "Already persisted" unless package.save == false
       it += 1
-      break if it > max_numbers
+      break if it > max_number
     end
   end
 end

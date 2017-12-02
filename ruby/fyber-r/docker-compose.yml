@@ -9,10 +9,12 @@ services:
       - .env
 
   db:
-    image: postgres:9.5
+    restart: always
+    image: postgres:9.5-alpine
     ports:
       - "5432"
     environment:
-      - POSTGRES_PASSWORD=supersecret
-      - POSTGRES_USER=username
-      - POSTGRES_DB=dbname
+      - POSTGRES_PASSWORD:'supersecret'
+      - POSTGRES_DB:'dbname'
+    volumes:
+      - "./docker/db:/docker-entrypoint-initdb.d"
