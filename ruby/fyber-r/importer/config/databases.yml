@@ -1,5 +1,6 @@
 development:
   adapter: sqlite3
+  encoding: unicode
   database: db/development.sqlite3
 
 production:
@@ -14,4 +15,5 @@ production:
 
 test:
   adapter: sqlite3
+  encoding: unicode
   database: db/production.sqlite3

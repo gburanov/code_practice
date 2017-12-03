@@ -12,19 +12,23 @@ class PackageFactory
   rattr_initialize :name, :version, :url
 
   def extract
-    open(file) do |opened|
-      zlib_file = Zlib::GzipReader.new(opened)
-        Gem::Package::TarReader.new(zlib_file) do |tar_extracter|
-          tar_extracter.each do |entry|
-            if entry.full_name.end_with?("DESCRIPTION")
-              return parse_description(entry.read)
-            end
-          end
-      end
+    File.open(file, 'r:UTF-8') do |opened|
+      process_file(opened)
     end
   end
 
   private
+
+  def process_file(opened)
+    zlib_file = Zlib::GzipReader.new(opened)
+    Gem::Package::TarReader.new(zlib_file) do |tar_extracter|
+      tar_extracter.each do |entry|
+        if entry.full_name.end_with?('DESCRIPTION')
+          return parse_description(entry.read)
+        end
+      end
+    end
+  end
 
   def parse_description(description)
     attributes = Dcf.parse(description).first

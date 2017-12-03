@@ -6,7 +6,7 @@ class AuthorFactory
   end
 
   def call
-    authors(attributes["Author"].force_encoding("utf-8"))
+    authors(attributes['Author'])
   end
 
   def authors(attributes)

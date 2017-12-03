@@ -1,5 +1,5 @@
-require "./connection.rb"
-require "./author.rb"
+require_relative './connection.rb'
+require_relative './author.rb'
 
 class Package < ActiveRecord::Base
   has_many :authors
