@@ -1,4 +1,8 @@
-development: &dev
+development:
+  adapter: sqlite3
+  database: db/development.sqlite3
+
+production:
   adapter: postgresql
   host: db
   port: 5432
@@ -8,8 +12,6 @@ development: &dev
   username: postgres
   password: supersecret
 
-production:
-  <<: *dev
-
 test:
-  <<: *dev
+  adapter: sqlite3
+  database: db/production.sqlite3

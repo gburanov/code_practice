@@ -5,8 +5,12 @@ services:
     build: importer
     depends_on:
       - db
+    environment:
+      - DATABASE_ENV=development
     env_file:
       - .env
+    ports:
+      - "8080:4567"
 
   db:
     restart: always

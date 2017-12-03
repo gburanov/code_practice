@@ -3,9 +3,10 @@ require 'attr_extras'
 class PackagePresenter
   rattr_initialize :package
 
-  def call
-    puts show_package
-    puts "Authors #{show_authors}"
+  def call(stream)
+    stream << show_package << "\n"
+    stream << "Authors #{show_authors}" << "\n"
+    stream << "\n"
   end
 
   def show_package
