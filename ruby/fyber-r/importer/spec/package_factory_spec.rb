@@ -1,4 +1,4 @@
-require "./package_factory"
+require_relative "../package_factory"
 require "webmock/rspec"
 
 describe PackageFactory do

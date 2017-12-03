@@ -1,4 +1,4 @@
-require_relative "../repository"
+require_relative "../../repository"
 
 describe Repository do
   subject { Repository.new("https://cran.r-project.org/src/contrib/") }
@@ -24,7 +24,7 @@ describe Repository do
     let (:package) { packages[1] }
 
     it { expect(package.name).to eq "abbyyR" }
-    it { expect(package.version).to eq "0.3" }
+    it { expect(package.version).to eq "0.5.1" }
   end
 
   context "Parses 3rd package" do

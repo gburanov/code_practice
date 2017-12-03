@@ -7,3 +7,7 @@ docker-compose build
 ```
 docker-compose up
 ```
+* Run tests
+```
+docker-compose run importer rake
+```

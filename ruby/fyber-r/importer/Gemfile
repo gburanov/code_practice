@@ -5,9 +5,12 @@ gem 'attr_extras'
 gem 'pg'
 gem 'treetop-dcf'
 
+gem 'sinatra'
+
 group :test do
   gem 'database_cleaner'
   gem 'webmock'
+  gem 'rspec'
 end
 
 group :development, :test do
