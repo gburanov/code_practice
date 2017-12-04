@@ -1,4 +1,4 @@
-require "./repository.rb"
+require_relative './repository.rb'
 
 class RepositoryPersister
   rattr_initialize :repository
@@ -7,7 +7,7 @@ class RepositoryPersister
     it = 0
     repository.parse do |package|
       puts "Parsing... package #{package}"
-      puts "Already persisted" unless package.save == false
+      puts 'persisted' unless package.save == false
       it += 1
       break if it > max_number
     end

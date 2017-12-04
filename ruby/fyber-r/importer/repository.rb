@@ -2,27 +2,23 @@ require 'attr_extras'
 require 'open-uri'
 require 'dcf'
 
+require 'byebug'
+
 require_relative './package_factory.rb'
 
 class Repository
-  rattr_initialize :url
+  attr_accessor :url
+
+  def initialize(url)
+    @package = ''
+    @version = ''
+    @url = url
+  end
 
   # probably need to switch it to state machine
-  def parse
+  def parse(&block)
     open(file) do |f|
-      @package = ""
-      @version = ""
-      f.read.each_line do |line|
-        pair = Dcf.parse(line)
-        next if pair.nil?
-        attribute = pair.first.keys[0]
-        if attribute == 'Package'
-          @package = pair.first.values[0]
-        elsif attribute == 'Version'
-          @version = pair.first.values[0]
-          yield package(@package, @version)
-        end
-      end
+      f.read.each_line { |line| read_line(line, &block) }
     end
   end
 
@@ -31,6 +27,19 @@ class Repository
   end
 
   private
+
+  def read_line(line)
+    line = line.encode(Encoding::UTF_8)
+    pair = Dcf.parse(line)
+    return if pair.nil?
+    attribute = pair.first.keys[0]
+    if attribute == 'Package'
+      @package = pair.first.values[0]
+    elsif attribute == 'Version'
+      @version = pair.first.values[0]
+      yield package(@package, @version)
+    end
+  end
 
   def file
     URI.join(url, 'PACKAGES')

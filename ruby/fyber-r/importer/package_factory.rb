@@ -12,7 +12,7 @@ class PackageFactory
   rattr_initialize :name, :version, :url
 
   def extract
-    File.open(file, 'r:UTF-8') do |opened|
+    open(file) do |opened|
       process_file(opened)
     end
   end
