@@ -1,0 +1,20 @@
+source 'https://rubygems.org'
+
+gem 'activerecord'
+gem 'attr_extras'
+gem 'pg'
+gem 'treetop-dcf'
+
+gem 'sinatra'
+
+group :test do
+  gem 'sqlite3'
+  gem 'database_cleaner'
+  gem 'webmock'
+  gem 'rspec'
+end
+
+group :development, :test do
+  gem 'rubocop'
+  gem 'byebug'
+end
