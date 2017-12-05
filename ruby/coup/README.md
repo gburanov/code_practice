@@ -7,7 +7,17 @@ docker-compose build
 ```
 docker-compose up
 ```
+* Check GUI
+```
+http://127.0.0.1:4567/
+```
 * Run tests
 ```
-docker-compose run importer rake
+docker-compose run importer rspec
 ```
+
+
+## Solution
+* Uses postgres but only in production
+* two separate processes - to read and to write data
+* Read process can be run in the background

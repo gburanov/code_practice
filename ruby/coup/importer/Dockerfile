@@ -13,3 +13,5 @@ RUN bundle install
 
 # Start server
 CMD ["./start_script.sh"]
+
+EXPOSE 4567

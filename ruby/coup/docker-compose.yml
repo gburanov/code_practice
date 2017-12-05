@@ -3,14 +3,14 @@ version: '3.3'
 services:
   importer:
     build: importer
+    ports:
+      - "4567:4567"
     depends_on:
       - db
     environment:
       - DATABASE_ENV=development
     env_file:
       - .env
-    ports:
-      - "8080:4567"
 
   db:
     restart: always
