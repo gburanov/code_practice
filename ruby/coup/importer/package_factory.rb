@@ -13,6 +13,7 @@ class PackageFactory
 
   def extract
     open(file) do |opened|
+      opened.set_encoding(Encoding::UTF_8)
       process_file(opened)
     end
   end
@@ -21,6 +22,7 @@ class PackageFactory
 
   def process_file(opened)
     zlib_file = Zlib::GzipReader.new(opened)
+    opened.set_encoding(Encoding::UTF_8)
     Gem::Package::TarReader.new(zlib_file) do |tar_extracter|
       tar_extracter.each do |entry|
         if entry.full_name.end_with?('DESCRIPTION')
@@ -31,6 +33,7 @@ class PackageFactory
   end
 
   def parse_description(description)
+    description.force_encoding(Encoding::UTF_8)
     attributes = Dcf.parse(description).first
     package =  Package.new(mapping(attributes))
     package.authors << AuthorFactory.new(attributes).call

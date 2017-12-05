@@ -2,8 +2,6 @@ require 'attr_extras'
 require 'open-uri'
 require 'dcf'
 
-require 'byebug'
-
 require_relative './package_factory.rb'
 
 class Repository
@@ -29,7 +27,7 @@ class Repository
   private
 
   def read_line(line)
-    line = line.encode(Encoding::UTF_8)
+    line.force_encoding(Encoding::UTF_8)
     pair = Dcf.parse(line)
     return if pair.nil?
     attribute = pair.first.keys[0]
