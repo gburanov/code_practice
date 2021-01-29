@@ -39,6 +39,6 @@ func (t OptionalBool) Equal(other OptionalBool) bool {
 }
 
 // only required if populate option is set
-func NewPopulatedOptionalBool(r OptionalBool) *OptionalBool {
+func NewPopulatedOptionalBool(r randyRequestAdx) *OptionalBool {
 	return nil
 }
